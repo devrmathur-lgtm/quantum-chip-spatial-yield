@@ -1,20 +1,19 @@
 # Spatial Fabrication Variation and Superconducting-Qubit Collision Yield
 
-This repository studies whether the **spatial arrangement** of fabrication-induced qubit-frequency errors changes predicted frequency-collision statistics in a fixed-frequency superconducting processor, relative to a control that preserves the same realized error values but randomly shuffles their positions.
+A computational study of whether the **spatial arrangement** of fabrication-induced qubit-frequency errors changes superconducting-qubit frequency-collision statistics, compared with an exact-value shuffled control that preserves the same realized error values.
 
-## Headline result
+## Primary result
 
-The preregistered primary experiment uses the measured-data-derived QuTech/Dolan spatial model at
+The frozen primary experiment uses a measured-data-derived QuTech/Dolan spatial model on a **65-qubit distance-5 heavy-hex processor**.
 
-- total frequency spread: **97.57841384 MHz**
-- spatial covariance fraction: **q = 0.67549**
-- processor: **65-qubit distance-5 heavy-hex**
-- nominal frequency groups: **5.00, 5.07, and 5.14 GHz**
-- nominal spacing: **70 MHz**
-- anharmonicity: **-330 MHz**
-- paired Monte Carlo realizations: **100,000**
-
-Under that frozen model:
+| Parameter | Value |
+|---|---:|
+| Total frequency spread, sigma_f | 97.57841384 MHz |
+| Spatial covariance fraction, q | 0.67549 |
+| Nominal frequency groups | 5.00, 5.07, 5.14 GHz |
+| Nominal spacing | 70 MHz |
+| Anharmonicity | -330 MHz |
+| Paired Monte Carlo realizations | 100,000 |
 
 | Condition | Mean collisions |
 |---|---:|
@@ -22,61 +21,77 @@ Under that frozen model:
 | Exact-value shuffled assignment | 19.12500 |
 | Spatial minus shuffled | -5.02492 |
 
-This corresponds to a **26.27% lower mean collision burden** under the spatial assignment.
-
-The scientifically firm conclusion is therefore:
+The spatial assignment gives a **26.27% lower mean collision burden** than the exact-value shuffled control.
 
 > At the measured-data-derived fabrication scale, spatial assignment itself changes collision statistics even when the realized error values are held fixed.
 
-At this high spread, collision-free processor yield is effectively near zero in both conditions, so this is a collision-burden result rather than a practical high-yield processor result.
+At this high spread, collision-free processor yield is effectively near zero in both conditions. The primary result is therefore a collision-burden result rather than a practical high-yield processor result.
 
-## Low-spread engineering interpretation
+![Primary effect decomposition](results/figures/heteroscedasticity_decomposition_reconstructed.png)
 
-The original constant-q scale-family experiment also found that, if the fitted pre-tuning spatial covariance fraction is preserved while the total frequency spread is reduced to 10 MHz, collision-free yield is approximately:
+## Why spatial structure matters
 
-- **92.584% spatial**
-- **54.200% shuffled**
-- **+38.384 percentage points**
+For two qubits i and j,
 
-That result is mathematically valid **under the constant-q model**, but it must not be interpreted as an unconditional prediction for a real tuned processor.
+`Var(f_i - f_j) = Var(f_i) + Var(f_j) - 2 Cov(f_i, f_j)`.
 
-A later q-by-sigma sensitivity analysis showed, at 10 MHz:
+Positive covariance can narrow relative-frequency differences between nearby sites. Because collision conditions depend on frequency differences and combinations, changing the spatial covariance structure can change collision probability even when the overall error distribution is unchanged.
 
-| q | Yield advantage |
+A decomposition of the primary result gives:
+
+| Covariance model | Spatial minus shuffled collisions |
+|---|---:|
+| IID equal variance | +0.00063 |
+| Heterogeneous diagonal only | -0.42270 |
+| Equal-marginal correlated | -4.47699 |
+| Full primary covariance | -5.02492 |
+
+A symmetric attribution assigns approximately **90.3%** of the primary effect to inter-site correlation and **9.7%** to heterogeneous site variances.
+
+## Low-spread engineering sensitivity
+
+If the fitted pre-tuning covariance fraction q = 0.67549 is preserved while the total frequency spread is reduced to 10 MHz, the model gives:
+
+- **92.584% spatial collision-free yield**
+- **54.200% shuffled collision-free yield**
+- **+38.384 percentage-point yield advantage**
+
+This is a conditional model result, not an unconditional prediction for a real post-tuned processor.
+
+The later q-sensitivity analysis shows the dependence explicitly:
+
+| q at 10 MHz | Spatial yield advantage |
 |---:|---:|
 | 0.05 | +1.87 pp |
 | 0.10 | +4.09 pp |
 | 0.20 | +8.45 pp |
+| 0.67549 | +38.384 pp |
 
-The practical benefit therefore depends strongly on how much spatial covariance survives the physical route used to achieve lower frequency spread.
+![Low-spread q sensitivity](results/figures/low_sigma_q_10mhz_reconstructed.png)
 
-## Mechanism check
+The practical effect therefore depends strongly on how much spatial covariance survives process improvement or post-fabrication tuning.
 
-A decomposition of the 97.57841384 MHz primary effect found:
+## Robustness checks
 
-- IID equal-variance control: delta collisions = +0.00063
-- heterogeneous diagonal-only covariance: delta collisions = -0.42270
-- equal-marginal correlated covariance: delta collisions = -4.47699
-- full primary covariance: delta collisions = -5.02492
+The project tested:
 
-A symmetric attribution assigns approximately **90.3%** of the primary effect to inter-site correlation and **9.7%** to heterogeneous site variances.
+- q uncertainty and alternative spatial covariance families
+- heteroscedasticity versus inter-site correlation
+- three Type-4 collision conventions
+- 60/70/80 MHz nominal frequency spacing
+- physical-gradient scale-up assumptions
+- low-sigma residual covariance
+- public LASIQ post-tuning residual data
 
-## Important repository status
+The sign of the primary spatial effect remained negative under all three audited Type-4 conventions.
 
-This public-layout repository has been **reconstructed from the final project record**. The scientific conclusions and numerical headline results below are the final corrected values, but the original generated binary workbooks, full raw result arrays, and some original script bytes are not currently retrievable from the project file store.
-
-For scientific integrity, missing original artifacts have **not** been fabricated. Their exact historical filenames and intended GitHub locations are listed in:
-
-`docs/audit/original_artifacts_required.md`
-
-The source code in `src/` is a clean public reference implementation of the frozen logic and controls. It is not claimed to be byte-identical to the archived working scripts.
+![Type-4 robustness](results/figures/type4_three_way_primary_reconstructed.png)
 
 ## Repository structure
 
 ```text
 .
 ├── README.md
-├── RECONSTRUCTION_STATUS.md
 ├── requirements.txt
 ├── src/
 ├── tests/
@@ -91,32 +106,55 @@ The source code in `src/` is a clean public reference implementation of the froz
     └── audit/
 ```
 
-## Reproducing the analysis
-
-The current repository can run unit tests for the collision predicates, exact-value shuffle control, and recovered model constants.
+## Running the tests
 
 ```bash
+pip install -r requirements.txt
 python -m unittest discover -s tests
 ```
 
-Full raw-data-to-final-result reproduction requires restoration of the original QuTech/imec processed maps, 65-qubit coordinate/covariance data, and full Monte Carlo output arrays listed in `docs/audit/original_artifacts_required.md`.
+## Documentation
 
-## Scientific interpretation
+Detailed project material is under `docs/`, including:
 
-The final evidence supports three distinct claims:
+- `research_and_methods.md`
+- `scientific_synthesis.md`
+- `yield_analysis.md`
+- `collision_mechanism.md`
+- `collision_engine_validation.md`
+- `claims_and_limitations.csv`
+- `uncertainty_hierarchy.csv`
 
-1. **Supported model claim:** spatial assignment itself changes collision statistics at fixed realized error values.
-2. **Supported primary-model claim:** the frozen QuTech/Dolan model lowers mean collision burden by about 26% at 97.58 MHz.
-3. **Conditional engineering claim:** at technologically useful spreads, the size of the yield benefit depends on the residual spatial covariance after process improvement or post-fabrication tuning.
+## Reproducibility status
 
-The project does **not** claim that IID models are universally pessimistic, that spatial manufacturing models are a new concept, or that a real 10 MHz tuned processor necessarily receives a 38 percentage-point yield gain.
+This public repository was assembled from the final corrected project record. The headline numerical results and scientific interpretation are preserved, but several original binary workbooks, full raw Monte Carlo arrays, and historical script files are not currently available as byte-identical artifacts.
+
+Missing historical artifacts have not been replaced with invented data. The source code under `src/` is a clean reference implementation of the recovered frozen logic and controls.
+
+The complete recovery boundary is documented in `docs/audit/original_artifacts_required.md`.
+
+Accordingly, the repository should currently be described as documenting and partially reproducing the final analysis, rather than as complete raw-data-to-result reproduction.
+
+## Scope of the conclusions
+
+Supported:
+
+1. Spatial assignment changes collision statistics at fixed realized error values in the frozen model.
+2. The measured-data-derived primary model lowers mean collision burden by about 26% at 97.58 MHz.
+3. Inter-site correlation dominates the primary effect relative to sitewise heteroscedasticity.
+
+Conditional:
+
+4. Large low-spread yield advantages are possible if substantial spatial covariance is retained.
+
+Unresolved:
+
+5. The spatial covariance that survives modern individual post-fabrication tuning.
+
+The project does not claim that IID models are universally pessimistic, that spatial manufacturing-aware quantum-chip simulation is itself a new concept, or that a real 10 MHz tuned processor necessarily receives a 38 percentage-point yield gain.
 
 ## Key literature
 
 - J. B. Hertzberg et al., *Laser-annealing Josephson junctions for yielding scaled-up superconducting quantum processors*, npj Quantum Information 7, 129 (2021). https://doi.org/10.1038/s41534-021-00464-5
 - Jacques Van Damme, *Scalable Superconducting Qubit Fabrication: A Study of Decoherence*, KU Leuven/imec PhD dissertation (2025).
-- SPICE-Q (2026), manufacturing-aware quantum-chip simulation. The project treats this as prior work establishing that spatial manufacturing models can enter quantum-chip simulation, so no broader novelty claim is made.
-
-## License
-
-No license is included yet. Add one only after deciding how you want others to reuse the code and data.
+- SPICE-Q (2026), manufacturing-aware quantum-chip simulation.
