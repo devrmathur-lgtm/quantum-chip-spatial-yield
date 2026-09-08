@@ -1,0 +1,2 @@
+sigma_f_mhz,q,n_realizations,spatial_mean_collisions,shuffled_mean_collisions,delta_spatial_minus_shuffled,relative_collision_reduction_percent,interpretation
+97.57841384,0.67549,100000,14.10008,19.125,-5.02492,26.27,Measured-data-derived primary collision-burden result

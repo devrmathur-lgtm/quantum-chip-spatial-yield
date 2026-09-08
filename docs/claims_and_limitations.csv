@@ -1,0 +1,10 @@
+claim,status,basis_or_limitation
+Spatial assignment itself changes collision statistics at fixed realized error values,supported,Primary paired exact-value shuffle at 97.57841384 MHz
+The frozen QuTech/Dolan model reduces mean collision burden by about 26% at 97.58 MHz,supported,14.10008 spatial versus 19.12500 shuffled
+Inter-site correlation dominates the primary spatial effect,supported within model,Symmetric decomposition attributes about 90.3% to correlation
+"At 10 MHz and constant q=0.67549, spatial yield is 92.584% versus 54.200% shuffled",supported conditionally,Valid for covariance-shape-preserving scaling
+A real tuned 10 MHz processor will gain about 38 percentage points of yield,unsupported,Post-tuning residual covariance is not established
+Post-tuning q equals the pre-tuning Dolan q,unresolved,Public 27Q room-temperature LASIQ residual map is insufficient
+IID or exchangeable models are universally pessimistic,unsupported,"Direction depends on architecture, covariance, frequency plan, and collision rules"
+Spatial manufacturing-aware quantum-chip simulation is a novel concept introduced here,unsupported,Prior manufacturing-aware work including SPICE-Q already uses spatial process models
+The matched measured-data-derived spatial versus exact-value shuffled processor comparison is a distinct contribution of this project,supported as project contribution; literature novelty should remain qualified,"Claim only the combination established by the literature review, not universal priority"

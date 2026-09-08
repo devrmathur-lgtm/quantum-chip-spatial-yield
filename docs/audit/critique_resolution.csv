@@ -1,0 +1,7 @@
+issue,resolution,final_status
+Low-sigma constant-q overinterpretation,Added q-by-sigma sensitivity and separated process improvement from individual tuning,resolved in interpretation; physical q_post remains unresolved
+Heteroscedasticity confound,Ran diagonal-only and equal-marginal correlation decomposition,resolved; primary effect dominated by correlation
+Type-4 ambiguity,"Audited symmetric, one-sided, and literal conventions","resolved as robustness issue, not uniquely identifiable from benchmark"
+Post-tuning covariance assumption,Investigated public LASIQ residual data and built mechanistic covariance framework,unresolved empirically; now stated explicitly
+Overbroad novelty claim,Restricted contribution to matched processor-level spatial versus exact-value shuffle comparison,resolved
+Total uncertainty understated by Monte Carlo CI,Created structural uncertainty hierarchy,resolved

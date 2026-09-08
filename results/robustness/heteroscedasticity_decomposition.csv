@@ -1,0 +1,12 @@
+sigma_f_mhz,case,delta_collisions,yield_advantage_pp,recovery_status
+97.57841384,IID equal variance,0.00063,,exact recovered delta
+97.57841384,Heterogeneous diagonal only,-0.4227,,exact recovered delta
+97.57841384,Equal-marginal correlated,-4.47699,,exact recovered delta
+97.57841384,Full primary,-5.02492,,exact recovered delta
+10,IID,0.0026,-0.13,exact recovered values
+10,Heterogeneous diagonal only,-0.0667,2.96,exact recovered values
+10,Equal-marginal correlated,-0.5808,30.42,exact recovered values
+10,Full primary,-0.6899,38.24,exact recovered values
+14,Heterogeneous diagonal only,,0.85,yield recovered; delta not recovered
+14,Equal-marginal correlated,,26.07,yield recovered; delta not recovered
+14,Full primary,,33.73,yield recovered; delta not recovered

@@ -1,0 +1,5 @@
+sigma_f_mhz,q,yield_advantage_pp,status
+10,0.05,1.87,exact recovered selected result
+10,0.1,4.09,exact recovered selected result
+10,0.2,8.45,exact recovered selected result
+10,0.67549,38.384,constant-q original-scale-family result from recovered yields

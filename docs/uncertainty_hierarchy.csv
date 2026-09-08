@@ -1,0 +1,11 @@
+rank_high_to_low,uncertainty,interpretation
+1,Room-temperature to cryogenic post-tuning proxy,Largest conceptual gap for practical tuned-processor claims
+2,Cross-process transfer,Measured fabrication data and future manufacturing/tuning routes need not share covariance
+3,Frequency-plan choice,Collision response depends on nominal frequency allocation
+4,Type-4 convention,Multiple plausible rule interpretations benchmark similarly
+5,Processor-scale spatial transfer,Transfer from measured Planar-17 scale to 65-qubit geometry is model dependent
+6,Low-sigma residual covariance q,Critical for practical low-spread yield predictions
+7,Covariance-family choice,"Short-range, NbTiN, all-Al, and affine alternatives differ"
+8,Heteroscedasticity versus correlation decomposition,Primary effect is mostly correlation but not exclusively
+9,Fitted q uncertainty,Primary q estimate has a lower fitted bound of 0.4852
+10,Monte Carlo sampling uncertainty,Small relative to structural/model uncertainties

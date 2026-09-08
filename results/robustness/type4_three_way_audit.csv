@@ -1,0 +1,7 @@
+context,type4_mode,sigma_f_mhz,spacing_mhz,spatial_mean_collisions,shuffled_mean_collisions,delta_collisions,ci95_low,ci95_high,notes
+external benchmark,lasiq_symmetric,132.3,70,,24.7809,,,,"benchmark total, not paired spatial/shuffled result"
+external benchmark,hertzberg_fixed_control_one_sided,132.3,70,,24.0014,,,,"benchmark total, not paired spatial/shuffled result"
+external benchmark,hertzberg_literal,132.3,70,,44.3393,,,,"benchmark total, not paired spatial/shuffled result"
+primary,lasiq_symmetric,97.57841384,70,14.1001,19.1225,-5.0224,,,audit rerun; tiny numerical difference from frozen primary aggregate
+primary,hertzberg_literal,97.57841384,70,22.3292,33.9147,-11.5855,,,exact recovered audit values
+primary,hertzberg_fixed_control_one_sided,97.57841384,70,,,-4.7843,-4.8176,-4.751,means not recovered; paired effect and CI recovered

@@ -1,0 +1,17 @@
+quantity,value,units_or_scale,status
+planar17_positions,17,count,recovered
+pitch_x,2.315,mm,recovered
+pitch_y,2.301,mm,recovered
+pitch_mean,2.308,mm approximate,recovered
+complete_dolan_maps,113,count,recovered
+paper_filtered_manhattan_maps,51,count,recovered
+dolan_sigma_f,97.57841384,MHz,recovered
+manhattan_sigma_f,154.76,MHz approximate,recovered
+primary_q,0.67549,dimensionless,recovered
+q_lower_bound,0.4852,dimensionless,recovered
+min_site_variance,0.3245,sigma^2,recovered
+max_site_variance,1.9492,sigma^2,recovered
+mean_adjacent_correlation,0.5718,dimensionless,recovered
+mean_adjacent_difference_variance,0.68865,sigma^2,recovered
+processor_qubits,65,count,recovered
+processor_edges,72,count,recovered

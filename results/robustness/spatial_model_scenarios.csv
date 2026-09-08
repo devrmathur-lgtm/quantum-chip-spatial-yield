@@ -1,0 +1,7 @@
+scenario,parameter_a,correlation_length_mm,q_or_role,interpretation
+Primary affine transfer,,,0.67549,fixed-spread identification transfer
+Primary affine lower fitted bound,,,0.4852,q uncertainty sensitivity
+Short-range stationary,0.92842,4.70596,,alternative covariance family
+Dense NbTiN residual,0.34266,16.4246,,alternative covariance family
+Weak all-Al residual,0.04861,14.7441,,alternative covariance family
+Fixed-physical-gradient scale-up,,,0.9263,processor-scale transfer sensitivity

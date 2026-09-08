@@ -1,0 +1,11 @@
+{
+  "dataset": "27-qubit room-temperature LASIQ tuning-residual map",
+  "n_qubits": 27,
+  "rms_residual_mhz": 4.8668,
+  "affine_r_squared": 0.0112,
+  "affine_permutation_p": 0.873,
+  "nearest_neighbor_r": -0.155,
+  "nearest_neighbor_p": 0.492,
+  "q_profile_mle": 0.0,
+  "interpretation": "No evidence in this small room-temperature map that establishes retained cryogenic post-tuning spatial covariance. q_post remains unresolved."
+}

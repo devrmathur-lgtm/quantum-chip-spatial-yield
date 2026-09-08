@@ -1,0 +1,4 @@
+metric,value,notes
+q_profile_mle,0.0,Recovered maximum-likelihood point from the 27Q room-temperature residual map
+n_qubits,27,Small public map
+rms_residual_mhz,4.8668,Matches the reported approximately 4.8 MHz scale

@@ -1,0 +1,19 @@
+sigma_f_mhz,q,spatial_mean_collisions,shuffled_mean_collisions,spatial_yield_percent,shuffled_yield_percent,yield_advantage_pp,recovery_status
+0,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+5,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+10,0.67549,,,92.584,54.2,38.384,recovered exact yields; absolute collision means not recovered
+14,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+20,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+30,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+40,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+50,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+60,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+70,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+80,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+90,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+97.57841384,0.67549,14.10008,19.125,,,,recovered exact primary collision means; yield effectively near zero but exact value not recovered
+100,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+110,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+120,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+132.3,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered
+150,0.67549,,,,,,sigma point confirmed from archived curve index; exact row values not recovered

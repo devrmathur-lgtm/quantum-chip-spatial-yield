@@ -1,0 +1,32 @@
+historical_project_filename,github_path,status
+quantum_project_source_of_truth_V2.md,docs/source_of_truth.md,reconstructed clean public report
+RESEARCH_AND_METHOD_REPORT_V2.md,docs/research_and_methods.md,reconstructed clean public report
+FINAL_SCIENTIFIC_SYNTHESIS_V2.md,docs/scientific_synthesis.md,reconstructed clean public report
+FINAL_YIELD_ANALYSIS_REPORT_V2.md,docs/yield_analysis.md,reconstructed clean public report
+COLLISION_MECHANISM_ANALYSIS_REPORT_V2.md,docs/collision_mechanism.md,reconstructed clean public report
+COLLISION_ENGINE_VALIDATION_REPORT_V2.md,docs/collision_engine_validation.md,reconstructed clean public report
+FINAL_CLAIMS_AND_LIMITATIONS_V2.csv,docs/claims_and_limitations.csv,reconstructed from final claim statuses
+FINAL_UNCERTAINTY_HIERARCHY_V2.csv,docs/uncertainty_hierarchy.csv,reconstructed from final hierarchy
+FROZEN_SPATIAL_MODEL.md,docs/frozen_spatial_model.md,reconstructed from frozen constants
+FROZEN_HIGH_SPREAD_CONVENTION.md,docs/frozen_high_spread_convention.md,reconstructed from frozen convention
+FROZEN_PAIRED_MONTE_CARLO_PROTOCOL.md,docs/frozen_paired_monte_carlo_protocol.md,reconstructed from frozen protocol
+V2_MECHANISTIC_POST_TUNING_COVARIANCE_MODEL.md,docs/mechanistic_post_tuning_covariance_model.md,reconstructed
+PRIMARY_DOLAN_RESULT_REPORT.md,results/primary/primary_result_report.md,reconstructed from exact primary result
+DOLAN_PRIMARY_FULL_SIGMA_CURVE.csv,results/primary/sigma_curve_recovery_index.csv,"partial recovery index, not a replacement for original full curve"
+V2_DOLAN_PRIMARY_FULL_SIGMA_CURVE_REPORT.md,results/primary/sigma_curve_interpretation.md,reconstructed final interpretation
+MASTER_ROBUSTNESS_SUMMARY_V2.md,results/robustness/master_robustness_summary.md,reconstructed final synthesis
+HETEROSCEDASTICITY_DECOMPOSITION.csv,results/robustness/heteroscedasticity_decomposition.csv,recovered headline rows
+HETEROSCEDASTICITY_DECOMPOSITION_REPORT.md,results/robustness/heteroscedasticity_decomposition_report.md,reconstructed
+LOW_SIGMA_Q_SENSITIVITY.csv,results/robustness/low_sigma_q_selected_results.csv,selected recovered rows only
+LOW_SIGMA_Q_SENSITIVITY_REPORT.md,results/robustness/low_sigma_q_sensitivity_report.md,reconstructed
+V2_TYPE4_PRIMARY_THREE_WAY_COMPARISON.csv,results/robustness/type4_three_way_audit.csv,recovered headline rows
+V2_TYPE4_THREE_WAY_AUDIT_REPORT.md,results/robustness/type4_three_way_audit_report.md,reconstructed
+V2_POST_TUNING_SPATIAL_DATA_INVESTIGATION.md,results/robustness/post_tuning_lasiq_investigation.md,reconstructed
+V2_LASIQ_FALCON_SPATIAL_DIAGNOSTICS.json,results/robustness/post_tuning_lasiq_diagnostics.json,recovered diagnostics
+V2_LASIQ_FALCON_Q_PROFILE.csv,results/robustness/post_tuning_lasiq_q_profile_summary.csv,"summary only, original full profile still required"
+quantum_collision_engine_v2.py,src/collision_engine.py,"clean reference implementation, not byte-identical"
+paired_mc_protocol.py,src/paired_monte_carlo.py,"clean reference implementation, not byte-identical"
+qutech_spatial_model.py,src/spatial_model.py,"clean constants/helpers, original full covariance implementation still required"
+test_quantum_collision_engine_v2.py,tests/test_collision_engine.py,clean predicate tests
+test_paired_mc_protocol.py,tests/test_paired_monte_carlo.py,clean protocol tests
+test_qutech_spatial_model.py,tests/test_spatial_model.py,clean constants/PSD tests
